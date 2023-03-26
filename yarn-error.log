@@ -1,0 +1,64 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\Eli\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js install
+
+PATH: 
+  C:\Users\Eli\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\Eli\AppData\Local\Programs\Python\Python310\;C:\ProgramData\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Java\jdk1.8.0_05\bin;C:\apache-maven-3.3.9\bin;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;"C:\Users\Eli\AppData\Local\Programs\Python\Python39;C:\Users\Eli\AppData\Local\Programs\Python\Python39;C:\Users\Eli\AppData\Local\Programs\Python\Python39\Scripts;";D:\Ultimo ano\4- Gestion de proyectos\Actividades - Tema 5\Laboratorio 3\Instaladores\sonar-scanner-3.3.0.1492-windows\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;D:\Programas\Gitnstalation\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\WireGuard\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\Eli\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\Eli\AppData\Local\Programs\Python\Python311\;C:\Users\Eli\AppData\Local\Microsoft\WindowsApps;D:\sonar-scanner-3.3.0.1492-windows\bin;C:\Users\Eli\.dotnet\tools;D:\Programas\Ides programacion\PyCarm\PyCharm 2021.1.1\bin;;D:\Programas\Ides programacion\PyCarm\PyCharm Community Edition 2021.1.2\bin;;D:\Programas\Ides programacion\VSCodeInstalation\Microsoft VS Code\bin;C:\Users\Eli\AppData\Roaming\npm;C:\Users\Eli\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\GnuWin32\bin;C:\Users\Eli\AppData\Local\Programs\Python\Python311\Scripts;
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.14.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/moment/-/moment-2.29.4.tgz: ESOCKETTIMEDOUT
+      at ClientRequest.<anonymous> (C:\Users\Eli\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141517:19)
+      at Object.onceWrapper (node:events:639:28)
+      at ClientRequest.emit (node:events:520:28)
+      at TLSSocket.emitRequestTimeout (node:_http_client:758:9)
+      at Object.onceWrapper (node:events:639:28)
+      at TLSSocket.emit (node:events:532:35)
+      at TLSSocket.Socket._onTimeout (node:net:501:8)
+      at listOnTimeout (node:internal/timers:559:17)
+      at processTimers (node:internal/timers:502:7)
+
+npm manifest: 
+  {
+     "name": "finca_backend",
+     "version": "0.0.1",
+     "description": "Awesome project developed with TypeORM.",
+     "type": "commonjs",
+     "devDependencies": {
+        "ts-node": "10.7.0",
+        "@types/node": "^16.11.10",
+        "typescript": "4.5.2"
+     },
+     "dependencies": { 
+        "body-parser": "^1.20.1",
+        "connect-multiparty": "^2.2.0",
+        "cors": "^2.8.5",
+        "express": "^4.18.2",
+        "express-fileupload": "^1.4.0",
+        "jscs": "^3.0.7",
+        "moment": "^2.29.4",
+        "multer": "^1.4.5-lts.1",
+        "mv": "^2.1.1",
+        "mysql": "^2.14.1",
+        "pug": "^3.0.2",
+        "reflect-metadata": "^0.1.13",
+        "typeorm": "0.3.9"
+     },
+     "scripts": {
+        "start": "ts-node src/index.ts",
+        "typeorm": "typeorm-ts-node-commonjs"
+     }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
