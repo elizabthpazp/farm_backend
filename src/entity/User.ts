@@ -13,6 +13,9 @@ export class User {
     name: string
   
     @Column()
-    rol: number
+    rol: string
+
+    @Column()
+    password: string
 
 }

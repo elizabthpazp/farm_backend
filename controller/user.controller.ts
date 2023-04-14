@@ -13,13 +13,14 @@ export class UserController {
     constructor() {
         this.router = Router();
         this.routes();
-    }
+    } 
 
     public getUsuario = async (req: Request, res: Response) => {
-        
+      const nombre = req.query.name;  
+      const password = req.query.password;
         // const valid: any = await AppDataSource.manager.find(Token, { where: { token: token } });
         // if (valid.length > 0) {
-            return res.status(200).send(await AppDataSource.manager.find(User));
+            return res.status(200).send(await AppDataSource.manager.find(User, { where: { name: nombre, password : password} }));
        // }
      //   return res.status(401).send({ message: 'Usted no tiene acceso a este componente' });
     }
@@ -34,6 +35,7 @@ export class UserController {
             const nombre = req.body.name; 
             const rol = req.body.rol;
             const idFinca = req.body.idFinca; 
+            const password = req.body.password;
          
             if (await (await AppDataSource.manager.find(User, { where: { name: nombre} })).length == 0) {
               //  bcrypt.hash(password, 10, async (err, encrypted) => {
@@ -43,7 +45,8 @@ export class UserController {
                         const user = new User(); 
                         user.name = nombre; 
                         user.rol = rol; 
-                        user.idFinca = idFinca;   
+                        user.idFinca = idFinca;  
+                        user.password = password;
                         await AppDataSource.manager.save(User, user);
                         return res.status(200).send({ message: 'Usuario agregado correctamente' });
                 //    }
@@ -70,6 +73,7 @@ export class UserController {
         const body = req.body; 
         const nombre = body.name; 
         const rol = req.body.rol;  
+        const password = req.body.password;
       //  const valid: any = await AppDataSource.manager.find(Token, { where: { token: token } });
       //  if (valid.length > 0) {
 
